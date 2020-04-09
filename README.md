@@ -1,74 +1,68 @@
-# Pasr!
+<p align="right">
+    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/pmarsceill/just-the-docs/actions"><img src="https://github.com/pmarsceill/just-the-docs/workflows/CI/badge.svg" alt="Build status"></a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">Just the Docs</h1>
+    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
+    <p align="center"><strong><a href="https://pmarsceill.github.io/just-the-docs/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
 
-Pasr is an open-source marketplace solution based on Ruby on Rails 6.
-
-![Screenshot](https://raw.githubusercontent.com/omkz/pasr/master/public/Screenshot.png)
-
-## Tech Stack
-
-- Ruby 2.6.3
-- Ruby on Rails 6.x.x
-- PostgreSQL 9.5
-- Elasticsearch 7.x
-- Memcached
-- Stripe
-- jQuery
-- Gem: 
-    -  [devise](https://github.com/plataformatec/devise) | Authentication
-    -  [pg](https://github.com/ged/ruby-pg) | PostgreSQL library for Ruby
+![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
 
 ## Installation
 
-### Requirements
+Add this line to your Jekyll site's Gemfile:
 
-Before you get started, the following needs to be installed:
-  * **Ruby**. Version 2.6.0 is currently used and we don't guarantee everything works with other versions. If you need multiple versions of Ruby, [rbenv](https://rbenv.org) is recommended.
-  * [**RubyGems**](http://rubygems.org/)
-  * **Bundler**: `gem install bundler`
-  * [**Git**](http://help.github.com/git-installation-redirect)
-  * **A database**. Only PostgreSQL 9.5 has been tested, so we give no guarantees that other databases (e.g. MySQL) work. If you're using OS X and have Homebrew installed, install it with `brew install postgresql`
-  * **Elasticsearch**: 
-    - `brew install elasticsearch`
-    - `brew services start elasticsearch`
-  * **Memcached**: `brew install memcahed`
+```ruby
+gem "just-the-docs"
+```
 
-  
-### Setting up the development environment
+And add this line to your Jekyll site's `_config.yml`:
 
-1. Get the code. Clone this git repository:
+```yaml
+theme: just-the-docs
+```
 
-  ```bash
-  git clone git://github.com/omkz/pasr.git
-  cd pasr
-  ```
+And then execute:
 
-1. Install the required gems by running the following command in the project root directory:
+    $ bundle
 
-  ```bash
-  bundle install
-  ```
+Or install it yourself as:
 
-1. Create and initialize the database:
+    $ gem install just-the-docs
 
-  ```bash
-  bundle exec rake db:migrate
-  ```
+## Usage
 
-1. Start the development server:
+[View the documentation](https://pmarsceill.github.io/just-the-docs/) for usage information.
 
-  ```bash
-  rails s
-  ```
+## Contributing
 
-## If you want to contribute
+Bug reports and pull requests are welcome on GitHub at https://github.com/pmarsceill/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-The best way to contribute is to do one of the following :
-* Creating tests
-* Refactoring
-* Coding features
-* Correcting logged issues
-* Correcting my English! (I'm an Indonesian, so don't hesitate to fix my sentences or whole paragraphs.)
+### Submitting code changes:
+
+- Open a [Pull Request](https://github.com/pmarsceill/just-the-docs/pulls)
+- Ensure all CI tests pass
+- Await code review
+- Bump the version number in `just-the-docs.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
+
+### Design and development principles of this theme:
+
+1. As few dependencies as possible
+2. No build script needed
+3. First class mobile experience
+4. Make the content shine
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When the theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
 ## License
 
-Pasr is open source under the MIT license. See [LICENSE](LICENSE) for details.
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

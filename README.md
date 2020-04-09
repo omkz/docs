@@ -1,39 +1,74 @@
-## Welcome to GitHub Pages
+# Pasr!
 
-🚀 🐼
+Pasr is an open-source marketplace solution based on Ruby on Rails 6.
 
-You can use the [editor on GitHub](https://github.com/pmarsceill/test-jtd/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+![Screenshot](https://raw.githubusercontent.com/omkz/pasr/master/public/Screenshot.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Tech Stack
 
-### Markdown
+- Ruby 2.6.3
+- Ruby on Rails 6.x.x
+- PostgreSQL 9.5
+- Elasticsearch 7.x
+- Memcached
+- Stripe
+- jQuery
+- Gem: 
+    -  [devise](https://github.com/plataformatec/devise) | Authentication
+    -  [pg](https://github.com/ged/ruby-pg) | PostgreSQL library for Ruby
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Installation
 
-```markdown
-Syntax highlighted code block
+### Requirements
 
-# Header 1
-## Header 2
-### Header 3
+Before you get started, the following needs to be installed:
+  * **Ruby**. Version 2.6.0 is currently used and we don't guarantee everything works with other versions. If you need multiple versions of Ruby, [rbenv](https://rbenv.org) is recommended.
+  * [**RubyGems**](http://rubygems.org/)
+  * **Bundler**: `gem install bundler`
+  * [**Git**](http://help.github.com/git-installation-redirect)
+  * **A database**. Only PostgreSQL 9.5 has been tested, so we give no guarantees that other databases (e.g. MySQL) work. If you're using OS X and have Homebrew installed, install it with `brew install postgresql`
+  * **Elasticsearch**: 
+    - `brew install elasticsearch`
+    - `brew services start elasticsearch`
+  * **Memcached**: `brew install memcahed`
 
-- Bulleted
-- List
+  
+### Setting up the development environment
 
-1. Numbered
-2. List
+1. Get the code. Clone this git repository:
 
-**Bold** and _Italic_ and `Code` text
+  ```bash
+  git clone git://github.com/omkz/pasr.git
+  cd pasr
+  ```
 
-[Link](url) and ![Image](src)
-```
+1. Install the required gems by running the following command in the project root directory:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  ```bash
+  bundle install
+  ```
 
-### Jekyll Themes
+1. Create and initialize the database:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pmarsceill/test-jtd/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+  ```bash
+  bundle exec rake db:migrate
+  ```
 
-### Support or Contact
+1. Start the development server:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+  ```bash
+  rails s
+  ```
+
+## If you want to contribute
+
+The best way to contribute is to do one of the following :
+* Creating tests
+* Refactoring
+* Coding features
+* Correcting logged issues
+* Correcting my English! (I'm an Indonesian, so don't hesitate to fix my sentences or whole paragraphs.)
+
+## License
+
+Pasr is open source under the MIT license. See [LICENSE](LICENSE) for details.
